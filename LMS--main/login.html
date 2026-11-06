@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LMS Login</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>LearnHub LMS</h2>
+    <a href="index.html">Home</a>
+</nav>
+
+<div class="login-container">
+
+    <div class="login-box">
+
+        <h1>Login</h1>
+
+        <p>Welcome back!</p>
+
+        <form>
+
+            <label>Email</label>
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <label>Password</label>
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+                required
+            >
+
+            <button type="button" onclick="login()">
+                Login
+            </button>
+
+        </form>
+
+        <p>
+            Don't have an account?
+            <a href="#">Register</a>
+        </p>
+
+    </div>
+
+</div>
+
+<script>
+
+function login() {
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    if (email === "" || password === "") {
+        alert("Please enter email and password");
+        return;
+    }
+
+    // Temporary frontend login
+    window.location.href = "dashboard.html";
+}
+
+</script>
+
+</body>
+</html>
